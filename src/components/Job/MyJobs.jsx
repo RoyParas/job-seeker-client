@@ -19,7 +19,7 @@ const MyJobs = () => {
   useEffect(() => {
     try {
       axios
-        .get("http://localhost:4000/job/getMyJobs", {
+        .get("https://job-seeker-backend-deployment.onrender.com/job/getMyJobs", {
           withCredentials: true,
         })
         .then((res) => {
@@ -43,7 +43,7 @@ const MyJobs = () => {
   const handleUpdate = async(id) => {
     const updatedJob = jobs.find((job) => job._id === id);
     await axios
-      .put(`http://localhost:4000/job/update/${id}`, updatedJob, {
+      .put(`https://job-seeker-backend-deployment.onrender.com/job/update/${id}`, updatedJob, {
         withCredentials: true,
       })
       .then((res) => {
@@ -57,7 +57,7 @@ const MyJobs = () => {
 
   const deleteJob = async (id) => {
     await axios
-      .delete(`http://localhost:4000/job/delete/${id}`, {
+      .delete(`https://job-seeker-backend-deployment.onrender.com/job/delete/${id}`, {
         withCredentials: true,
       })
       .then((res) => {

@@ -13,7 +13,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/user/logout", {
+      const response = await axios.get("https://job-seeker-backend-deployment.onrender.com/user/logout", {
         withCredentials: true,
       });
       toast.success(response.data.message);
@@ -28,7 +28,7 @@ const Navbar = () => {
 
   const fetchUser = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/user/getUser", {
+      const response = await axios.get("https://job-seeker-backend-deployment.onrender.com/user/getUser", {
         withCredentials: true,
       });
       setUser(response.data.user);

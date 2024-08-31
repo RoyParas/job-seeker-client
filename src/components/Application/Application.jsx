@@ -29,7 +29,7 @@ const Application = () => {
 
     try {
       await axios
-        .post("http://localhost:4000/application/postApplication", formData, {
+        .post("https://job-seeker-backend-deployment.onrender.com/application/postApplication", formData, {
           withCredentials: true,
           headers: {
             "Content-Type": "multipart/form-data",

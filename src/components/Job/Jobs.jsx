@@ -12,7 +12,7 @@ const Jobs = () => {
   useEffect(() => {
     try {
       axios
-        .get("http://localhost:4000/job/getAllJobs", {
+        .get("https://job-seeker-backend-deployment.onrender.com/job/getAllJobs", {
           withCredentials: true,
         })
         .then((res) => {

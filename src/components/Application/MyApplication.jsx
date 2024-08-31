@@ -18,7 +18,7 @@ const MyApplication = () => {
     try {
       if(user && user.role === "Employer") {
         axios
-          .get("http://localhost:4000/application/employer/allApplications", {
+          .get("https://job-seeker-backend-deployment.onrender.com/application/employer/allApplications", {
             withCredentials: true,
           })
           .then((res) => {
@@ -26,7 +26,7 @@ const MyApplication = () => {
           });
       } else {
         axios
-          .get("http://localhost:4000/application/jobSeeker/allApplications", {
+          .get("https://job-seeker-backend-deployment.onrender.com/application/jobSeeker/allApplications", {
             withCredentials: true,
           })
           .then((res) => {
@@ -45,7 +45,7 @@ const MyApplication = () => {
   const deleteApplication = async (id) => {
     try {
       await axios
-        .delete(`http://localhost:4000/application/delete/${id}`, {
+        .delete(`https://job-seeker-backend-deployment.onrender.com/application/delete/${id}`, {
           withCredentials: true,
         })
         .then((res) => {
